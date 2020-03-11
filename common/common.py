@@ -48,6 +48,14 @@ def build_cmd_arguments() -> argparse.ArgumentParser:
         help='Site url, eg: https://atmoshpere.copernicus.eu'
     )
     parser.add_argument(
+        '-S', '--source', type=str,
+        help='Source file containing urls to capture screens'
+    )
+    parser.add_argument(
+        '-F', '--suffix', type=str,
+        help='The suffix that will be used for the files containing screenshots'
+    )
+    parser.add_argument(
         '-V', '--verbose', action='count', default=1,
         help='Verbosity. Default: 1'
     )
